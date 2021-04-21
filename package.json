@@ -1,7 +1,7 @@
 {
   "name": "secure-electron-license-keys-cli",
-  "version": "1.0.0",
-  "description": "Create and implement offline license key verification for your Electron apps.",
+  "version": "1.1.0",
+  "description": "A CLI to create and offline license keys for your Electron apps.",
   "main": "lib/index.js",
   "bin": {
     "secure-electron-license-keys-cli": "./lib/cli.js",

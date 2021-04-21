@@ -7,6 +7,8 @@ function parseArgumentsIntoOptions(rawArgs) {
     const args = arg({
         "--major": String,
         "--minor": String,
+        "--patch": String,
+        "--user": String,
         "--expire": String,
         "--public": String,
         "--private": String,
@@ -14,6 +16,8 @@ function parseArgumentsIntoOptions(rawArgs) {
         "--output": String,
         "-ma": "--major",
         "-mi": "--minor",
+        "-p": "--patch",
+        "-u": "--user",
         "-e": "--expire",
         "-pu": "--public",
         "-pr": "--private",
@@ -27,6 +31,8 @@ function parseArgumentsIntoOptions(rawArgs) {
     return {
         major: args["--major"] || "all",
         minor: args["--minor"] || "all",
+        patch: args["--patch"] || "all",
+        user: args["--user"] || "",
         expire: args["--expire"] || "",
         public: args["--public"] || "public.key",
         private: args["--private"] || "private.key",
@@ -54,6 +60,8 @@ export function cli(args) {
     const userData = {
         major: options.major,
         minor: options.minor,
+        patch: options.patch,
+        user: options.user,
         expire: options.expire
     };
 
